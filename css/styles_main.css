@@ -1,0 +1,213 @@
+*,*::after,*::before
+{
+    font-family: "Barlow Semi Condensed";
+    font-weight: 500;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body
+{
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-light-grayish-blue);
+}
+
+main
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.main-grid
+{
+    margin-top: 2rem;
+
+    max-width: var(--width-mobile);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "clifford"
+        "walters"
+        "harmon" 
+        "abrams"
+        "whittle";
+    gap: 1.5rem;
+}
+#clifford       {grid-area: clifford;}
+#walters        {grid-area: walters;}
+#harmon         {grid-area: harmon;}
+#abrams         {grid-area: abrams;}
+#whittle        {grid-area: whittle;}
+
+
+
+#clifford
+{
+    background-color:   var(--color-moderate-violet);
+    color:              var(--color-white);
+
+    background-image:       url(./../images/bg-pattern-quotation.svg);
+    background-repeat:      no-repeat;
+    background-position:    calc(100% - 1.5rem) 0.75rem;
+
+    --pic-border-color:        var(--color-light-gray);
+}
+#walters
+{
+    background-color:   var(--color-very-dark-grayish-blue);
+    color:              var(--color-white);
+
+    --pic-border-color:        var(--color-light-gray);
+}
+#abrams
+{
+    background-color:   var(--color-very-dark-blackish-blue);
+    color:              var(--color-white);
+
+    --pic-border-color:        var(--color-moderate-violet);
+}
+#harmon, #whittle
+{
+    background-color:   var(--color-white);
+    color:              var(--color-very-dark-grayish-blue);
+
+    --pic-border-color:        var(--color-very-dark-blackish-blue);
+}
+
+
+
+.container.for-grid-item
+{
+    background-color:   #696969;
+
+    padding-inline:     1.75rem;
+    padding-block:      1.75rem;
+
+    border-radius:      8px;
+
+    justify-content: flex-start;
+
+    position: relative;
+    box-shadow:
+        rgba(0, 0, 0, 0.25) 0px 2px 4px;
+}
+
+
+
+.container.for-author
+{
+    flex-direction: row;
+    margin-right: auto;
+}
+.author-pic
+{
+    width:      var(--author-pic-size);
+    height:     var(--author-pic-size);
+
+    border-radius: 100%;
+    margin-right: 0.5rem;
+    border: 2px solid var(--pic-border-color);
+}
+.container.for-author-info
+{
+    width: 100%;
+}
+.author-name, .author-title
+{
+    margin-right: auto;
+    font-size: 0.875rem;
+}
+.author-title
+{
+    opacity: 0.50; 
+}
+
+.container.for-text
+{
+    width: 100%;
+}
+.text-primary,.text-secondary
+{
+    width: 100%;
+}
+.text-primary
+{
+    margin-top: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.text-secondary
+{
+    margin-top: 0.75rem;
+    opacity: 0.70;
+    font-size: var(--font-size-text);
+    line-height: 1.375em;
+    text-align: left;
+    letter-spacing: 0.5px;
+}
+
+
+
+
+@media screen and (min-width: 950px) 
+{
+    
+    .main-grid
+    {
+        margin-block: 2rem;
+        max-width: 900px;
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "clifford   whittle "
+            "clifford   whittle "
+            "walters    harmon  "
+            "abrams     abrams  ";
+        gap: 1.5rem;
+    }
+
+}
+
+
+
+
+@media screen and (min-width: 1250px) 
+{
+    
+    .main-grid
+    {
+        margin-top: 2rem;
+        max-width: var(--width-desktop);
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "clifford   clifford    walters     whittle"
+            "harmon     abrams      abrams      whittle";
+        gap: 1.5rem;
+    }
+
+}
