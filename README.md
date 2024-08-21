@@ -3,7 +3,7 @@ This is a solution
 to [Testimonials grid section challenge](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7)
 on [Frontend Mentor](https://www.frontendmentor.io)
 
-![Difficulty-[1] Newbie](<https://img.shields.io/badge/Difficulty-[2] Junior-3CB371?style=for-the-badge>)
+![Difficulty-[2] Newbie](<https://img.shields.io/badge/Difficulty-[2] Junior-3CB371?style=for-the-badge>)
 ![GitHub repo size](<https://img.shields.io/github/repo-size/I-antiva-I/TestimonialsGridSection?label=Repo size&style=for-the-badge>)
 ![GitHub last commit (by committer](<https://img.shields.io/github/last-commit/I-antiva-I/TestimonialsGridSection?label=Last commit&style=for-the-badge>)
 
